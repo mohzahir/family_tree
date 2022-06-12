@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="codebase/diagram.js"></script>    
+  <link rel="stylesheet" href="codebase/diagram.css">
+  <link href="https://cdn.materialdesignicons.com/4.5.95/css/materialdesignicons.min.css?v=3.0.2" media="all" rel="stylesheet" type="text/css">
+  <style>
+    .dhx-diagram-demo_personal-card {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      color: rgba(0, 0, 0, 0.7);
+      border: 1px solid #DFDFDF;
+      padding: 10px 12px;
+    }
+    .dhx-diagram-demo_personal-card i {
+      color: rgba(0, 0, 0, 0.7);
+        height: 20px;
+        width: 20px;
+        font-size: 18px;
+    }
+    .dhx-diagram-demo_personal-card__info {
+      display: flex;
+    }
+    .dhx-diagram-demo_personal-card__info a {
+      color:#0288D1
+    }
+    .dhx-diagram-demo_personal-card__container {
+      height: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .dhx-diagram-demo_personal-card__container h3, .dhx-diagram-demo_personal-card__container p {
+      text-align: left;
+      font-size: 14px;
+      line-height: 20px;
+      height: 20px;
+      margin: 0 0 4px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .dhx-diagram-demo_personal-card__container i {
+      margin-right: 4px;
+    }
+    .dhx-diagram-demo_personal-card__img-container {
+      min-width: 93px;
+        width: 93px;
+        margin-right: 12px;
+    }
+    .dhx-diagram-demo_personal-card__img-container img {
+      width: inherit;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="diagram"></div>
+  <script>
+    //   const template = ({ photo, name, post, phone, mail }) => (`
+    //         <div class="dhx-diagram-demo_personal-card">
+    //         <div class="dhx-diagram-demo_personal-card__container dhx-diagram-demo_personal-card__img-container">
+    //                 <img src="${photo}" alt="${name}-${post}"></img>
+    //         </div>
+    //         <div class="dhx-diagram-demo_personal-card__container">
+    //                 <h3>${name}</h3>
+    //                 <p>${post}</p>
+    //                 <span class="dhx-diagram-demo_personal-card__info">
+    //                     <i class="mdi mdi-cellphone-android"></i>
+    //                     <p>${phone}</p>
+    //                 </span>
+    //                 <span class="dhx-diagram-demo_personal-card__info">
+    //                     <i class="mdi mdi-email-outline"></i>
+    //                     <a href="mailto:${mail}" target="_blank">${mail}</a>
+    //                 </span>
+    //         </div>
+    //         </div>`
+    //     );
+    const defaults = {
+        height: 115,
+        width: 330
+    };
+    const diagram = new dhx.Diagram("diagram", {
+        type: "org",
+        defaultShapeType: defaults
+    });
+
+
+
+    const data = [
+        {
+            id: "main",
+            name: "Kristin Mccoy",
+            post: "Medical director",
+            phone: "(405) 555-0128",
+            mail: "kmccoy@gmail.com",
+            photo: "https://docs.dhtmlx.com/diagram/samples/common/big_img/big-avatar-1.jpg",
+        },
+        {
+            id: "1",
+            name: "Theo Fisher",
+            post: "Head of department",
+            phone: "(405) 632-1372",
+            mail: "tfisher@gmail.com",
+            photo: "https://docs.dhtmlx.com/diagram/samples/common/big_img/big-avatar-2.jpg",
+            parent: "main"
+        },
+        {
+            id: "1.1",
+            name: "Francesca Saunders",
+            post: "Attending physician",
+            phone: "(402) 371-6736",
+            mail: "fsaunders@gmail.com",
+            photo: "https://docs.dhtmlx.com/diagram/samples/common/big_img/big-avatar-3.jpg",
+            parent: "1",
+            open: false
+        },
+        {
+            id: "2",
+            name: "Alisha Hall",
+            post: "Head of department",
+            phone: "(405) 372-9756",
+            mail: "ahall@gmail.com",
+            photo: "https://docs.dhtmlx.com/diagram/samples/common/big_img/big-avatar-4.jpg",
+            parent: "main",
+            open: false
+        },
+        {
+            id: "2.1",
+            name: "Milena Hunter",
+            post: "Attending physician",
+            phone: "(124) 622-1256",
+            mail: "mhunter@gmail.com",
+            photo: "https://docs.dhtmlx.com/diagram/samples/common/big_img/big-avatar-25.jpg",
+            parent: "2",
+            dir: "vertical",
+        },
+        {
+            id: "2.2",
+            name: "Maximus Dixon",
+            post: "Medical director",
+            phone: "(264) 684-4373",
+            mail: "mdixon@gmail.com",
+            photo: "https://docs.dhtmlx.com/diagram/samples/common/big_img/big-avatar-29.jpg",
+            parent: "2",
+            dir: "vertical",
+        },
+        {
+            id: "3",
+            name: "Edward Sharp",
+            post: "Head of department",
+            phone: "(451) 251-2578",
+            mail: "esharp@gmail.com",
+            photo: "https://docs.dhtmlx.com/diagram/samples/common/big_img/big-avatar-6.jpg",
+            parent: "main",
+            dir: "vertical",
+        },
+        {
+            id: "3.1",
+            name: "Cruz Burke",
+            post: "Attending physician",
+            phone: "(587) 234-8975",
+            mail: "cburke@gmail.com",
+            photo: "https://docs.dhtmlx.com/diagram/samples/common/big_img/big-avatar-7.jpg",
+            parent: "3",
+        },
+        {
+            id: "3.2",
+            name: "Eloise Saunders",
+            post: "Attending physician",
+            phone: "(875) 231-5332",
+            mail: "esaunders@gmail.com",
+            photo: "https://docs.dhtmlx.com/diagram/samples/common/big_img/big-avatar-8.jpg",
+            parent: "3",
+        },
+        {
+            id: "3.3",
+            name: "Sophia Matthews",
+            post: "Attending physician",
+            phone: "(361) 423-7234",
+            mail: "smatthews@gmail.com",
+            photo: "https://docs.dhtmlx.com/diagram/samples/common/big_img/big-avatar-9.jpg",
+            parent: "3",
+        },
+        {
+            id: "3.4",
+            name: "Kara Foster",
+            post: "Attending physician",
+            phone: "(565) 525-0672",
+            mail: "kfoster@gmail.com",
+            photo: "https://docs.dhtmlx.com/diagram/samples/common/big_img/big-avatar-10.jpg",
+            parent: "3",
+        },
+    ];
+
+    // diagram.addShape("template", {
+    //     template,
+    //     defaults
+    // });
+    diagram.data.parse(data);
+ </script>
+</body>
+</html>

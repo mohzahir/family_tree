@@ -1,0 +1,31 @@
+import { ActionDirection, IBaseCoords, ItemConfig } from "../../ts-diagram";
+import { BaseDiagramEditor } from "./BaseDiagramEditor";
+import { IDefaultEditorConfig, ITargetOption } from "./types";
+import { IDataItem } from "../../ts-data";
+import { Id } from "../../ts-common/types";
+export declare class FreeEditor extends BaseDiagramEditor {
+    config: IDefaultEditorConfig;
+    private _changeMode;
+    private _shapesBar;
+    private _copiedItems;
+    constructor(container: string | HTMLElement, config: IDefaultEditorConfig);
+    protected _initDiagram(): void;
+    protected _initUI(container: any): void;
+    protected _showConnectPoints(id: Id, toggle?: boolean): void;
+    protected _setHandlers(): void;
+    protected _getGroupTarget(item: IDataItem, option: ITargetOption, target?: any): IDataItem;
+    protected _copyItems(): void;
+    protected _pasteItems(): void;
+    protected _addSelection(id: Id): void;
+    protected _clearSelection(): void;
+    protected _initHotkeys(): void;
+    protected _addItemToGroup(selectedItem: IDataItem): void;
+    protected _addItem(item: ItemConfig): Id;
+    protected _addSwimlaneItem(item: any): Id;
+    protected _moveChilds(id: Id, mov: IBaseCoords): boolean;
+    protected _setParentBox(id: Id): void;
+    protected _setItemIndicator({ entryArea, $captureArea, id }: IDataItem, percent: number): void;
+    protected _addSwimlaneCells(item: any, dir: ActionDirection): void;
+    private _changeLineTextAutoPosition;
+    private _addLineText;
+}
