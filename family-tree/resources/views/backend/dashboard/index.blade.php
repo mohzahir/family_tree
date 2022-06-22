@@ -18,8 +18,8 @@
             <div class="card-body">
                 <div class="media d-flex">
                 <div class="media-body text-left">
-                    <h3 class="info">850</h3>
-                    <h6>Products Sold</h6>
+                    <h3 class="info">{{ $people_count }}</h3>
+                    <h6>عدد الافراد</h6>
                 </div>
                 <div>
                     <i class="icon-basket-loaded info font-large-2 float-right"></i>
@@ -39,8 +39,8 @@
             <div class="card-body">
                 <div class="media d-flex">
                 <div class="media-body text-left">
-                    <h3 class="warning">$748</h3>
-                    <h6>Net Profit</h6>
+                    <h3 class="warning">{{ $families_count }}</h3>
+                    <h6>عدد الاسر</h6>
                 </div>
                 <div>
                     <i class="icon-pie-chart warning font-large-2 float-right"></i>
