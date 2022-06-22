@@ -1,0 +1,39 @@
+/**
+* Theme Name: Lineago Demo
+* Theme URI: http://preview.lsvr.sk/lineago
+* Description: Lineago demo theme
+* Author: LSVRthemes
+* Author URI: http://themeforest.net/user/LSVRthemes/portfolio
+* Template: lineago
+* Version: 1.0.0
+*/
+
+/* -------------------------------------------------------------------------
+    STYLE SWITCHER
+------------------------------------------------------------------------- */
+
+body { overflow-x: hidden; }
+.lsvr-style-switcher { position: fixed; top: 300px; right: -200px; transition: all 200ms; z-index: 1000; }
+.lsvr-style-switcher--active { right: 0; }
+.lsvr-style-switcher__inner { position: relative; padding: 10px 20px 10px 60px; background-color: #FFF;
+	box-shadow: 0 0 10px rgba( 0, 0, 0, 0.1 ); border-radius: 3px 0 0 3px; }
+.lsvr-style-switcher__toggle { display: block; position: absolute; top: 10px; left: 10px; padding: 0; width: 40px; height: 40px; line-height: 40px; font-size: 24px; text-align: center; color: rgba( 0, 0, 0, 0.5 ); }
+.lsvr-style-switcher__toggle:hover { color: rgba( 0, 0, 0, 0.7 ); }
+.lsvr-style-switcher__toggle:active { color: rgba( 0, 0, 0, 0.5 ); }
+.lsvr-style-switcher__toggle-icon:before { font-family: 'lineago-icons'!important;
+		speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none;
+		line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+		content: '\e927'; }
+.lsvr-style-switcher__toggle-icon,
+.lsvr-style-switcher__toggle-icon:before { line-height: inherit; }
+.lsvr-style-switcher__color-scheme-list { list-style-type: none; margin: 0; padding: 0; whitespace: nowrap; }
+.lsvr-style-switcher__color-scheme-item { list-style-type: none; margin: 0; padding: 0; line-height: normal; display: inline-block; margin-left: 5px; }
+.lsvr-style-switcher__color-scheme-item:first-child { margin: 0; }
+.lsvr-style-switcher__color-scheme-btn { display: block; width: 40px; height: 40px; opacity: 0.7; }
+.lsvr-style-switcher__color-scheme-btn:hover { opacity: 0.9; }
+.lsvr-style-switcher__color-scheme-btn:active { opacity: 0.85; }
+.lsvr-style-switcher__color-scheme-item--active .lsvr-style-switcher__color-scheme-btn { opacity: 1; }
+.lsvr-style-switcher__color-scheme-btn--default { background-color: #D8220B; }
+.lsvr-style-switcher__color-scheme-btn--scheme2 { background-color: #e3693a; }
+.lsvr-style-switcher__color-scheme-btn--scheme3 { background-color: #0d9989; }
+.lsvr-style-switcher__color-scheme-btn--scheme4 { background-color: #2F65B9; }
