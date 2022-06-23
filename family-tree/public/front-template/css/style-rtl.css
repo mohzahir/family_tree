@@ -1,0 +1,10 @@
+.custom-class-for-rtl:before{
+    right: -50%;
+    margin-right: -40px;
+}
+
+@media (max-width: 480px){
+    .family-tree--4-cols .family-tree__grid{
+        grid-template-columns: none;
+    }
+}

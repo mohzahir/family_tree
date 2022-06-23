@@ -125,12 +125,12 @@
 
 
 
-                        <!-- <li class="lineago-cta-list__item">
+                        <li class="lineago-cta-list__item">
 
                             <h3 class="lineago-cta-list__item-title">
                                 اشهد تاريخ العائلة<br>من خلال الاحداث </h3>
 
-                            <a href="https://preview.lsvr.sk/lineago/family-timeline/" class="lineago-cta-list__item-link">
+                            <a href="#" class="lineago-cta-list__item-link">
                                 <span class="lineago-cta-list__item-label">الذهاب الى تسلسل الاحداث</span>
                                 <span class="lineago-cta-list__item-icon" aria-hidden="true"></span>
                             </a>
@@ -145,12 +145,12 @@
                             <h3 class="lineago-cta-list__item-title">
                                 شاهد صور<br>الماضي &amp; الحاضر </h3>
 
-                            <a href="https://preview.lsvr.sk/lineago/galleries/" class="lineago-cta-list__item-link">
+                            <a href="#" class="lineago-cta-list__item-link">
                                 <span class="lineago-cta-list__item-label">فتح معرض الصور</span>
                                 <span class="lineago-cta-list__item-icon" aria-hidden="true"></span>
                             </a>
 
-                        </li> -->
+                        </li>
 
 
 
@@ -169,17 +169,18 @@
             <div class="lineago-anniversaries__inner">
                 <div class="lsvr-container">
 
-
+                    
+                    @if(count($featured_people) > 0)
                     <!-- SECTION HEADER : begin -->
                     <header class="lineago-anniversaries__header">
 
                         <h2 class="lineago-anniversaries__header-title">
-                            الشخصيات المميزه </h2>
+                            الشخصيات المميزة </h2>
 
 
                         <p class="lineago-anniversaries__header-more">
 
-                            <a href="https://preview.lsvr.sk/lineago/family-timeline/" class="lineago-anniversaries__header-more-link">
+                            <a href="{{ route('family.member', 1) }}" class="lineago-anniversaries__header-more-link">
                                 <span class="lineago-anniversaries__header-more-label">الذهاب لشجرة العائلة</span>
                                 <span class="lineago-anniversaries__header-more-icon" aria-hidden="true"></span>
                             </a>
@@ -195,7 +196,6 @@
                     <!-- SECTION GRID : begin -->
                     <div class="lineago-anniversaries__grid">
 
-                        @if(count($featured_people) > 0)
                         @foreach($featured_people as $person)
                         <!-- GRID COL : begin -->
                         <div class="lineago-anniversaries__grid-col">
@@ -205,7 +205,7 @@
                                 <div class="lineago-anniversaries__item-inner">
 
                                     <!-- ITEM DATE : begin -->
-                                    <h3 class="lineago-anniversaries__item-date" title="June 26, 2022">
+                                    <!-- <h3 class="lineago-anniversaries__item-date" title="June 26, 2022">
 
                                         <span class="lineago-anniversaries__item-date-month">
                                             Jun </span>
@@ -213,7 +213,7 @@
                                         <span class="lineago-anniversaries__item-date-day">
                                             26 </span>
 
-                                    </h3>
+                                    </h3> -->
                                     <!-- ITEM DATE : end -->
 
                                     <!-- ITEM CONTENT : begin -->
@@ -260,11 +260,11 @@
                         </div>
                         <!-- GRID COL : begin -->
                         @endforeach
-                        @endif
-
-
+                        
+                        
                     </div>
                     <!-- SECTION GRID : end -->
+                    @endif
 
 
                 </div>

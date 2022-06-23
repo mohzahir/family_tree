@@ -16,8 +16,8 @@ return [
     |
     */
 
-    // 'default' => env('DB_CONNECTION', 'pgsql'),
-    'default' => 'pgsql',
+    'default' => env('DB_CONNECTION', 'mysql'),
+    // 'default' => 'pgsql',
 
     /*
     |--------------------------------------------------------------------------
@@ -64,7 +64,6 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => $DATABASE_URL["host"],

@@ -470,7 +470,7 @@
 
 
                                         <!-- CARD : begin -->
-                                        <div class="family-tree__card family-tree__card--child" data-post-id="82" data-card-type="child">
+                                        <div class="family-tree__card family-tree__card--child custom-class-for-rtl" data-post-id="82" data-card-type="child">
                                             <div class="family-tree__card-inner">
 
 

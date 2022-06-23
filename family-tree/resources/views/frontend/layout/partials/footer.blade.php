@@ -82,8 +82,8 @@
 
                     <div class="footer-collage__grid-item">
 
-                        <a href="{{ route('family.member', ['id' => $person->id]) }}" class="footer-collage__grid-item-link footer-collage__grid-item-link--loading" title="{{ $person->name }}" style="background-image: url( {{ $person->photo ? asset($person->photo) : asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }} )">
-                            <img src="{{ $person->photo ? asset($person->photo) : asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }}" class="footer-collage__grid-item-image" alt="{{ $person->name }}">
+                        <a href="{{ route('family.member', ['id' => $person->id]) }}" class="footer-collage__grid-item-link footer-collage__grid-item-link--loading" title="{{ $person->name }}" style="background-image: url( {{ $person->photo ? asset($person->photo) : asset('template/app-assets/images/portrait/medium/avatar-m-1.png') }} )">
+                            <img src="{{ $person->photo ? asset($person->photo) : asset('template/app-assets/images/portrait/medium/avatar-m-1.png') }}" class="footer-collage__grid-item-image" alt="{{ $person->name }}">
                         </a>
 
                     </div>

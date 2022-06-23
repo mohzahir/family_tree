@@ -12,7 +12,7 @@
     <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
 	<link rel='stylesheet' id='wp-block-library-css' href='{{ asset("front-template/css/style.min.css") }}' type='text/css' media='all' />
 	<link rel='stylesheet' id='lsvr-lineago-main-style-css' href='{{ asset("front-template/css/style.css") }}' type='text/css' media='all' />
-	<link rel='stylesheet' id='lsvr-lineago-general-style-css' href='{{ asset("front-template/css/general.css") }}' type='text/css' media='all' />
+	<link rel='stylesheet' id='lsvr-lineago-general-style-css' href='{{ asset("front-template/css/general-rtl.css") }}' type='text/css' media='all' />
 	<link rel='stylesheet' id='lsvr-lineago-demo-style-css' href='{{ asset("front-template/css/style1.css") }}' type='text/css' media='all' />
 	<!-- <link rel='stylesheet' id='lsvr-lineago-google-fonts-css' href='https://fonts.googleapis.com/css2?family=Playfair+Display%3Awght%40300%3B400%3B500%3B600%3B700%3B800&#038;display=swap&#038;ver=5.8.4' type='text/css' media='all' /> -->
 	<link rel='stylesheet' id='lsvr-lineago-color-scheme-css' href='{{ asset("front-template/css/default.css") }}' type='text/css' media='all' />
@@ -41,13 +41,15 @@
 		.header-branding__logo-link {
 			max-width: 90px;
 		}
+		
 	</style>
 
 	<!--Livewire-->
     @livewireStyles
     <!--END Livewire-->
 
-	<link rel="stylesheet" href="{{ asset('front-template/css/front-rtl.css') }}">
+	<!-- <link rel="stylesheet" href="{{ asset('front-template/css/front-rtl.css') }}"> -->
+	<link rel="stylesheet" href="{{ asset('front-template/css/style-rtl.css') }}">
 </head>
 
 <body dir="rtl" data-rsssl=1 class="lsvr_family_member-template-default single single-lsvr_family_member postid-77 wp-custom-logo">
