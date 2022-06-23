@@ -236,25 +236,32 @@
 
 
 
-
+                            @if($person->family)
                             <!-- POST GALLERY : begin -->
-                            <div class="post__gallery">
+                            <div class="post__info">
+                                <h2 class="post__info-item-title"> الأخوان </h2>
 
-                                <ul class="post__gallery-list lsvr-is-masonry">
+                                <ul class="post__info-list">
 
+                                    @foreach($person->family->sons as $brother)
+                                    <!-- BURIAL PLACE : begin -->
+                                    <li class="post__info-item post__info-item--burial-place">
 
-                                    <li class="post__gallery-item">
+                                        <!-- POST INFO ITEM TITLE : begin -->
+                                        <!-- POST INFO ITEM TITLE : end -->
 
-                                        <a href="https://preview.lsvr.sk/lineago/wp-content/uploads/sites/8/2022/01/member_gallery_07.jpg" class="post__gallery-item-link lsvr-open-in-lightbox" title="">
-
-                                            <img class="post__gallery-item-img" src="https://preview.lsvr.sk/lineago/wp-content/uploads/sites/8/2022/01/member_gallery_07-600x600.jpg" alt="Family">
-
-                                        </a>
+                                        <!-- POST INFO ITEM TEXT : begin -->
+                                        <p class="post__info-item-text">
+                                            <a href="{{ route('family.member', ['id' => $brother->id]) }}">{{ $brother->name }}</a>
+                                        </p>
+                                        <!-- POST INFO ITEM TEXT : end -->
 
                                     </li>
+                                    <!-- BURIAL PLACE : end -->
+                                    @endforeach
 
 
-                                    <li class="post__gallery-item">
+                                    <!-- <li class="post__gallery-item">
 
                                         <a href="https://preview.lsvr.sk/lineago/wp-content/uploads/sites/8/2022/01/member_gallery_06.jpg" class="post__gallery-item-link lsvr-open-in-lightbox" title="">
 
@@ -284,13 +291,14 @@
 
                                         </a>
 
-                                    </li>
+                                    </li> -->
 
 
                                 </ul>
 
                             </div>
                             <!-- POST GALLERY : end -->
+                            @endif
 
 
 
