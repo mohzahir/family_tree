@@ -219,18 +219,16 @@ class FamilyController extends Controller
 
                 //ensure father is exist or add it
                 $father_id = $request->father_id;
-                $father = Person::find($father_id);
-                if (!$father) {
+                if (!is_numeric($father_id)) {
                     $father_id = Person::insertGetId([
                         'name' => $request->father_id,
-                        'gender' => 'male',
+                        'gender' => 'female',
                     ]);
                 }
 
                 //ensure mother is exist or add it
                 $mother_id = $request->mother_id;
-                $mother = Person::find($mother_id);
-                if (!$mother) {
+                if (!is_numeric($mother_id)) {
                     $mother_id = Person::insertGetId([
                         'name' => $request->mother_id,
                         'gender' => 'female',
@@ -258,31 +256,31 @@ class FamilyController extends Controller
                 if ($request->sons > 0) {
                     foreach ($request->sons as $key => $son_id_or_name) {
                         if ($son_id_or_name) {
-                            $son = Person::find($son_id_or_name);
+                            // $son = Person::find($son_id_or_name);
                             // dd(is_numeric($son_id_or_name));
-                            if (!$son) {
-                                Person::insert([
-                                    'name' => $son_id_or_name,
-                                    'gender' => 'male',
-                                    'son_family_id' => $family->id
-                                ]);
-                            } else {
-                                $son->update([
-                                    'son_family_id' => $family->id
-                                ]);
-                            }
-                            // if (is_numeric($son_id_or_name)) {
-                            //     $son = Person::find($son_id_or_name);
-                            //     $son->update([
-                            //         'son_family_id' => $family->id
-                            //     ]);
-                            // } else {
+                            // if (!$son) {
                             //     Person::insert([
                             //         'name' => $son_id_or_name,
                             //         'gender' => 'male',
                             //         'son_family_id' => $family->id
                             //     ]);
+                            // } else {
+                            //     $son->update([
+                            //         'son_family_id' => $family->id
+                            //     ]);
                             // }
+                            if (is_numeric($son_id_or_name)) {
+                                $son = Person::find($son_id_or_name);
+                                $son->update([
+                                    'son_family_id' => $family->id
+                                ]);
+                            } else {
+                                Person::insert([
+                                    'name' => $son_id_or_name,
+                                    'gender' => 'male',
+                                    'son_family_id' => $family->id
+                                ]);
+                            }
                         }
                     }
                 }
@@ -292,31 +290,31 @@ class FamilyController extends Controller
                     foreach ($request->daughters as $key => $daughter_id_or_name) {
                         if ($daughter_id_or_name) {
 
-                            $daughter = Person::find($daughter_id_or_name);
+                            // $daughter = Person::find($daughter_id_or_name);
                             // dd(is_numeric($daughter_id_or_name));
-                            if (!$daughter) {
-                                Person::insert([
-                                    'name' => $daughter_id_or_name,
-                                    'gender' => 'female',
-                                    'son_family_id' => $family->id
-                                ]);
-                            } else {
-                                $daughter->update([
-                                    'son_family_id' => $family->id
-                                ]);
-                            }
-                            // if (is_numeric($daughter_id_or_name)) {
-                            //     $son = Person::find($daughter_id_or_name);
-                            //     $son->update([
+                            // if (!$daughter) {
+                            //     Person::insert([
+                            //         'name' => $daughter_id_or_name,
+                            //         'gender' => 'female',
                             //         'son_family_id' => $family->id
                             //     ]);
                             // } else {
-                            //     Person::insert([
-                            //         'name' => $daughter_id_or_name,
-                            //         'gender' => 'male',
+                            //     $daughter->update([
                             //         'son_family_id' => $family->id
                             //     ]);
                             // }
+                            if (is_numeric($daughter_id_or_name)) {
+                                $son = Person::find($daughter_id_or_name);
+                                $son->update([
+                                    'son_family_id' => $family->id
+                                ]);
+                            } else {
+                                Person::insert([
+                                    'name' => $daughter_id_or_name,
+                                    'gender' => 'male',
+                                    'son_family_id' => $family->id
+                                ]);
+                            }
                         }
                     }
                 }

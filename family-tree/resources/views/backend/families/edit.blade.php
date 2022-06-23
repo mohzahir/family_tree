@@ -108,7 +108,7 @@
                                                         <select @change="getCountryCities($($el).val())" type="text" class="form-control" name="country_id" >
                                                             <option value=""></option>
                                                             @foreach($countries as $country)
-                                                                <option value="{{$country->id}}" {{ $country->id == $family->country->id ? 'selected' : ''}}>{{$country->name}}</option>
+                                                                <option value="{{$country->id}}" {{ $country->id == $family->country_id ? 'selected' : ''}}>{{$country->name}}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
