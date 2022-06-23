@@ -28,7 +28,7 @@
                                 </li>
 
 
-                                <li id="header-menu-primary__item-334" class="header-menu-primary__item header-menu-primary__item--level-0 menu-item menu-item-type-custom menu-item-object-custom {{ request()->routeIs('family.members') ? 'current-menu-ancestor': '' }} current-menu-parent menu-item-has-children" role="presentation">
+                                <li id="header-menu-primary__item-334" class="header-menu-primary__item header-menu-primary__item--level-0 menu-item menu-item-type-custom menu-item-object-custom {{ request()->routeIs('family.members') || request()->routeIs('family.member') ? 'current-menu-ancestor': '' }} current-menu-parent menu-item-has-children" role="presentation">
 
                                     <a href="{{ route('family.members') }}" id="header-menu-primary__item-link-334" class="header-menu-primary__item-link header-menu-primary__item-link--level-0" role="menuitem" aria-owns="header-menu-primary__submenu-wrapper-334" aria-controls="header-menu-primary__submenu-wrapper-334" aria-haspopup="true" aria-expanded="false">
 

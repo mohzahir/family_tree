@@ -70,7 +70,7 @@ class FamilyController extends Controller
                 if (!is_numeric($father_id)) {
                     $father_id = Person::insertGetId([
                         'name' => $request->father_id,
-                        'gender' => 'female',
+                        'gender' => 'male',
                     ]);
                 }
 
@@ -154,7 +154,7 @@ class FamilyController extends Controller
                             } else {
                                 Person::insert([
                                     'name' => $daughter_id,
-                                    'gender' => 'male',
+                                    'gender' => 'female',
                                     'son_family_id' => $family_id
                                 ]);
                             }
@@ -222,7 +222,7 @@ class FamilyController extends Controller
                 if (!is_numeric($father_id)) {
                     $father_id = Person::insertGetId([
                         'name' => $request->father_id,
-                        'gender' => 'female',
+                        'gender' => 'male',
                     ]);
                 }
 
@@ -311,7 +311,7 @@ class FamilyController extends Controller
                             } else {
                                 Person::insert([
                                     'name' => $daughter_id_or_name,
-                                    'gender' => 'male',
+                                    'gender' => 'female',
                                     'son_family_id' => $family->id
                                 ]);
                             }
