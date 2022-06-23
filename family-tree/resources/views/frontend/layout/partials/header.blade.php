@@ -92,37 +92,7 @@
 
 
 
-                        <!-- HEADER SEARCH : begin -->
-                        <div id="header-search" class="header-search" role="group" aria-expanded="false">
 
-                            <!-- SEARCH FORM : begin -->
-                            <form class="header-search__form" action="#" method="get" role="search">
-
-
-                                <label for="header-search-input" class="header-search__input-label screen-reader-text">Search</label>
-
-                                <input id="header-search-input" type="text" name="s" autocomplete="off" class="header-search__input" placeholder="Search this site" aria-label="Search field">
-
-                                <button class="header-search__submit" type="submit" title="Submit search">
-                                    <span class="header-search__submit-icon" aria-hidden="true"></span>
-                                </button>
-
-                            </form>
-                            <!-- SEARCH FORM : begin -->
-
-                        </div>
-                        <!-- HEADER SEARCH : end -->
-
-                        <!-- HEADER SEARCH TOGGLE : begin -->
-                        <button id="header-search-toggle" class="header-search-toggle" type="button" title="Open search" data-label-expand-popup="Open search" data-label-submit-search="Submit search" aria-controls="header-search" aria-haspopup="true" aria-expanded="false">
-                            <span class="header-search-toggle__icon" aria-hidden="true"></span>
-                        </button>
-                        <!-- HEADER SEARCH TOGGLE : end -->
-
-                        <!-- HEADER SEARCH CLOSE : begin -->
-                        <button class="header-search-close" type="button" title="Close search">
-                            <span class="header-search-close__icon" aria-hidden="true"></span>
-                        </button>
 
 
 
@@ -132,7 +102,8 @@
 
                 <!-- HEADER NAVBAR TOGGLE : begin -->
                 <button id="header-navbar-toggle" class="header-navbar-toggle" type="button" title="Open menu" data-label-expand-popup="Open menu" data-label-collapse-popup="Close menu" aria-controls="header-navbar" aria-haspopup="true" aria-expanded="false">
-                    <span class="header-navbar-toggle__icon" aria-hidden="true"></span>
+                    <!-- <span class="header-navbar-toggle__icon" aria-hidden="true"></span> -->
+                    <i class="la la-bars"></i>
                 </button>
                 <!-- HEADER NAVBAR TOGGLE : end -->
 

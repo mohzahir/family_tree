@@ -14,7 +14,7 @@
 	<link rel='stylesheet' id='lsvr-lineago-main-style-css' href='{{ asset("front-template/css/style.css") }}' type='text/css' media='all' />
 	<link rel='stylesheet' id='lsvr-lineago-general-style-css' href='{{ asset("front-template/css/general-rtl.css") }}' type='text/css' media='all' />
 	<link rel='stylesheet' id='lsvr-lineago-demo-style-css' href='{{ asset("front-template/css/style1.css") }}' type='text/css' media='all' />
-	<!-- <link rel='stylesheet' id='lsvr-lineago-google-fonts-css' href='https://fonts.googleapis.com/css2?family=Playfair+Display%3Awght%40300%3B400%3B500%3B600%3B700%3B800&#038;display=swap&#038;ver=5.8.4' type='text/css' media='all' /> -->
+	<link rel='stylesheet' id='lsvr-lineago-google-fonts-css' href='https://fonts.googleapis.com/css2?family=Playfair+Display%3Awght%40300%3B400%3B500%3B600%3B700%3B800&#038;display=swap&#038;ver=5.8.4' type='text/css' media='all' />
 	<link rel='stylesheet' id='lsvr-lineago-color-scheme-css' href='{{ asset("front-template/css/default.css") }}' type='text/css' media='all' />
 	<style id='lsvr-lineago-general-style-inline-css' type='text/css'>
 		body,

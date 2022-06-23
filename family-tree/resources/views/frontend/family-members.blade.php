@@ -70,7 +70,8 @@
                                 <input id="post-archive-options__search-input" class="post-archive-options__search-input" type="text" name="searchText" placeholder="ابحث عن افراد العائلة هنا" aria-label="Search field" value="{{ request('searchText') }}">
 
                                 <button class="post-archive-options__search-submit" type="submit" title="Submit search">
-                                    <span class="post-archive-options__search-submit-icon" aria-hidden="true"></span>
+                                    <!-- <span class="post-archive-options__search-submit-icon" aria-hidden="true"></span> -->
+                                    <i class="la la-search"></i>
                                 </button>
 
                             </div>

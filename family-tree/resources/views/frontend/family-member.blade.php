@@ -137,9 +137,10 @@
 
                     <!-- POST CONTAINER TOGGLE : begin -->
                     <p class="post__container-toggle-wrapper">
-                        <button type="button" class="post__container-toggle" aria-controls="post__container-inner" aria-expanded="false" data-label-expand-popup="المعلومات الشخصية" data-label-collapse-popup="اخفاء المعلومات الشخصية">
+                        <button type="button" style="padding-left: 30px;" class="post__container-toggle" aria-controls="post__container-inner" aria-expanded="false" data-label-expand-popup="المعلومات الشخصية" data-label-collapse-popup="اخفاء المعلومات الشخصية">
                             <span class="post__container-toggle-label">معلومات شخصية</span>
-                            <span class="post__container-toggle-icon" aria-hidden="true"></span>
+                            <!-- <span class="post__container-toggle-icon" aria-hidden="true"></span> -->
+                            <i class="la la-arrows-alt la-lg"></i>
                         </button>
                     </p>
                     <!-- POST CONTAINER TOGGLE : end -->

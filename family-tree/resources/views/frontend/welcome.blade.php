@@ -45,7 +45,8 @@
                                 <input id="core-header-search-input" type="text" name="searchText" autocomplete="off" class="core-header-search__input" placeholder="ابحث عن الافراد هنا" aria-label="Search field">
 
                                 <button class="core-header-search__submit" type="submit" title="Submit search">
-                                    <span class="core-header-search__submit-icon" aria-hidden="true"></span>
+                                    <!-- <span class="core-header-search__submit-icon" aria-hidden="true"></span> -->
+                                    <i class="la la-search"></i>
                                 </button>
 
                             </div>
@@ -101,8 +102,9 @@
                                 تعرف على<br>افراد العائلة </h3>
 
                             <a href="{{ route('family.members')}}" class="lineago-cta-list__item-link">
+                                <i class="la la-arrow-right"></i>
                                 <span class="lineago-cta-list__item-label">الذهاب الى افراد العائلة</span>
-                                <span class="lineago-cta-list__item-icon" aria-hidden="true"></span>
+                                <!-- <span class="lineago-cta-list__item-icon" aria-hidden="true"></span> -->
                             </a>
 
                         </li>
@@ -116,8 +118,9 @@
                                 تصفح شجرة عائلة<br>عبود </h3>
 
                             <a href="{{ route('family.member', ['id' => 1]) }}" class="lineago-cta-list__item-link">
+                                <i class="la la-arrow-right"></i>
                                 <span class="lineago-cta-list__item-label">الذهاب الى شجرة العائلة</span>
-                                <span class="lineago-cta-list__item-icon" aria-hidden="true"></span>
+                                <!-- <span class="lineago-cta-list__item-icon" aria-hidden="true"></span> -->
                             </a>
 
                         </li>
@@ -131,8 +134,9 @@
                                 اشهد تاريخ العائلة<br>من خلال الاحداث </h3>
 
                             <a href="#" class="lineago-cta-list__item-link">
+                                <i class="la la-arrow-right"></i>
                                 <span class="lineago-cta-list__item-label">الذهاب الى تسلسل الاحداث</span>
-                                <span class="lineago-cta-list__item-icon" aria-hidden="true"></span>
+                                <!-- <span class="lineago-cta-list__item-icon" aria-hidden="true"></span> -->
                             </a>
 
                         </li>
@@ -146,8 +150,9 @@
                                 شاهد صور<br>الماضي &amp; الحاضر </h3>
 
                             <a href="#" class="lineago-cta-list__item-link">
+                                <i class="la la-arrow-right"></i>
                                 <span class="lineago-cta-list__item-label">فتح معرض الصور</span>
-                                <span class="lineago-cta-list__item-icon" aria-hidden="true"></span>
+                                <!-- <span class="lineago-cta-list__item-icon" aria-hidden="true"></span> -->
                             </a>
 
                         </li>
