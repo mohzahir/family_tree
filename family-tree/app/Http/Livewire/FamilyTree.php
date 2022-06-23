@@ -38,7 +38,7 @@ class FamilyTree extends Component
             }
             $branch['children'] = $child->sons($father_or_mother);
             foreach ($branch['children'] as $child) {
-                $child->hasChildren = Family::where($child->gender == 'male' ? 'father_id' : 'mother_id', $child->id)->exists();
+                $child->hasChildren = Family::where($father_or_mother, $child->id)->exists();
             }
             $this->dispatchBrowserEvent('new-branch', ['branch' => $branch, 'index' => $index]);
             // dd($branch);
