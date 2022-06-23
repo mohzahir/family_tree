@@ -19,9 +19,7 @@ class FamiliesList extends Component
     public function delete($id)
     {
         $family = Family::findOrFail($id);
-        $family->update([
-            'deleted_at' => date('Y-m-d H:i:s')
-        ]);
+        $family->delete();
     }
 
     public function render()
@@ -31,7 +29,7 @@ class FamiliesList extends Component
                 ->join('people', 'people.id', 'families.father_id')
                 ->when($this->searchText, function ($q) {
                     $q->where('people.name', "like", "%" . $this->searchText . "%");
-                })->paginate(8),
+                })->paginate(20),
             // 'data' => DB::table('families')
             //     ->join('people', 'people.id', 'families.father_id')
             //     ->when($this->searchText, function ($q) {

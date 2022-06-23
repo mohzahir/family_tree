@@ -17,9 +17,7 @@ class PeopleList extends Component
     public function delete($id)
     {
         $person = Person::findOrFail($id);
-        $person->update([
-            'deleted_at' => date('Y-m-d H:i:s')
-        ]);
+        $person->delete();
     }
 
     public function render()
@@ -29,7 +27,7 @@ class PeopleList extends Component
                 ->when($this->searchText, function ($q) {
                     $q->where('name', "like", "%" . $this->searchText . "%");
                 })
-                ->paginate(8)
+                ->paginate(20)
         ]);
     }
 }

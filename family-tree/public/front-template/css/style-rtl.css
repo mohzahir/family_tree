@@ -5,7 +5,7 @@
 
 @media (max-width: 480px){
     .family-tree--4-cols .family-tree__grid{
-        grid-template-columns: none;
+        grid-template-columns: repeat(2, 1fr);
     }
     .family-tree__grid{
         row-gap: 60px !important; 

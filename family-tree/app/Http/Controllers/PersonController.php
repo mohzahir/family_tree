@@ -168,9 +168,7 @@ class PersonController extends Controller
      */
     public function destroy(Person $person)
     {
-        $person->update([
-            'deleted_at' => date('Y-m-d H:i:s')
-        ]);
+        $person->delete();
 
         return redirect()->route('person.index')->with('message', 'تم الحذف بنجاح');
     }

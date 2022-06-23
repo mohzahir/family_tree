@@ -334,9 +334,7 @@ class FamilyController extends Controller
      */
     public function destroy(Family $family)
     {
-        $family->update([
-            'deleted_at' => date('Y-m-d H:i:s')
-        ]);
+        $family->delete();
 
         return redirect()->route('family.index')->with('message', 'تم الحذف بنجاح');
     }

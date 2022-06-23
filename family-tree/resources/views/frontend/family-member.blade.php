@@ -19,13 +19,13 @@
 				
 												<li class="breadcrumbs__item">
 													<span class="breadcrumbs__item-decor" aria-hidden="true"></span>
-													<a href="https://preview.lsvr.sk/lineago/" class="breadcrumbs__link">الرئيسيه</a>
+													<a href="{{ route('family.home') }}" class="breadcrumbs__link">الرئيسيه</a>
 												</li>
 				
 				
 												<li class="breadcrumbs__item">
 													<span class="breadcrumbs__item-decor" aria-hidden="true"></span>
-													<a href="https://preview.lsvr.sk/lineago/family/" class="breadcrumbs__link">اعضاء العائلة</a>
+													<a href="{{ route('family.member', ['id' => $person->id]) }}" class="breadcrumbs__link">اعضاء العائلة</a>
 												</li>
 				
 				
@@ -73,11 +73,12 @@
 				
 				
 									<!-- CORE HEADER INFO : begin -->
+                                    @if($person->dateOfBirth || $person->dateOfDeath || $person->another_name)
 									<p class="core-header__info">
 				
 				
 										<span class="core-header__info-date core-header__info-date--birth" title="Date of birth">
-											{{ $person->dateOfBirth ?? null }} </span>
+											{{ $person->dateOfBirth ?? '' }} </span>
 				
 				
 				
@@ -89,10 +90,11 @@
 				
 				
 										<span class="core-header__info-age">
-											(العمر 45) </span>
+											{{ $person->another_name ? '('. $person->another_name .')' : ' ' }}  </span>
 				
 				
 									</p>
+                                    @endif
 									<!-- CORE HEADER INFO : begin -->
 				
 				
@@ -135,7 +137,7 @@
 
                     <!-- POST CONTAINER TOGGLE : begin -->
                     <p class="post__container-toggle-wrapper">
-                        <button type="button" class="post__container-toggle" aria-controls="post__container-inner" aria-expanded="false" data-label-expand-popup="Show Bio" data-label-collapse-popup="اخفاء المعلومات الشخصية">
+                        <button type="button" class="post__container-toggle" aria-controls="post__container-inner" aria-expanded="false" data-label-expand-popup="المعلومات الشخصية" data-label-collapse-popup="اخفاء المعلومات الشخصية">
                             <span class="post__container-toggle-label">معلومات شخصية</span>
                             <span class="post__container-toggle-icon" aria-hidden="true"></span>
                         </button>
@@ -148,13 +150,12 @@
 
 
                             <!-- POST CONTENT : begin -->
-                            <div class="post__content">
+                            <!-- <div class="post__content">
 
 
-                                {!! $person->note !!}
 
 
-                            </div>
+                            </div> -->
                             <!-- POST CONTENT : end -->
 
 
@@ -212,12 +213,13 @@
                                     <li class="post__info-item post__info-item--burial-place">
 
                                         <!-- POST INFO ITEM TITLE : begin -->
-                                        <h2 class="post__info-item-title">Burial Place</h2>
+                                        <h2 class="post__info-item-title"> نبذه شخصية </h2>
                                         <!-- POST INFO ITEM TITLE : end -->
 
                                         <!-- POST INFO ITEM TEXT : begin -->
                                         <p class="post__info-item-text">
-                                            Bayside Cemetery, New York </p>
+                                            {!! $person->note !!}
+                                        </p>
                                         <!-- POST INFO ITEM TEXT : end -->
 
                                     </li>
