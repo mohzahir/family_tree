@@ -26,8 +26,8 @@
                                     <div class="widget__inner">
                                         <div class="menu-footer-widgets-menu-1-container">
                                             <ul id="menu-footer-widgets-menu-1" class="menu">
-                                                <li id="menu-item-312" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-312 {{ request->routeIs('family.members') ? 'current-menu-item' : '' }}"><a href="{{ route('family.members') }}">أفراد العائلة</a></li>
-                                                <li id="menu-item-314" class="menu-item menu-item-type-post_type menu-item-object-lsvr_family_member {{ request->routeIs('family.member') ? 'current-menu-item' : '' }} menu-item-314"><a href="{{ route('family.member', ['id' => 1]) }}" aria-current="page">شجرة العائلة</a></li>
+                                                <li id="menu-item-312" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-312 {{ request()->routeIs('family.members') ? 'current-menu-item' : '' }}"><a href="{{ route('family.members') }}">أفراد العائلة</a></li>
+                                                <li id="menu-item-314" class="menu-item menu-item-type-post_type menu-item-object-lsvr_family_member {{ request()->routeIs('family.member') ? 'current-menu-item' : '' }} menu-item-314"><a href="{{ route('family.member', ['id' => 1]) }}" aria-current="page">شجرة العائلة</a></li>
                                                 <!-- <li id="menu-item-313" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313"><a href="https://preview.lsvr.sk/lineago/family-timeline/">Family Timeline</a></li> -->
                                             </ul>
                                         </div>
