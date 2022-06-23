@@ -12,7 +12,7 @@
                     <div class="footer-widgets__inner">
                         <div class="footer-widgets__grid">
 
-                            <div class="footer-widgets__col">
+                            <!-- <div class="footer-widgets__col">
                                 <div id="text-2" class="widget widget_text">
                                     <div class="widget__inner">
                                         <div class="textwidget">
@@ -20,15 +20,15 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="footer-widgets__col">
                                 <div id="nav_menu-2" class="widget widget_nav_menu">
                                     <div class="widget__inner">
                                         <div class="menu-footer-widgets-menu-1-container">
                                             <ul id="menu-footer-widgets-menu-1" class="menu">
-                                                <li id="menu-item-312" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-312"><a href="https://preview.lsvr.sk/lineago/family/">Members Directory</a></li>
-                                                <li id="menu-item-314" class="menu-item menu-item-type-post_type menu-item-object-lsvr_family_member current-menu-item menu-item-314"><a href="https://preview.lsvr.sk/lineago/family/john-lewis/" aria-current="page">Family Tree</a></li>
-                                                <li id="menu-item-313" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313"><a href="https://preview.lsvr.sk/lineago/family-timeline/">Family Timeline</a></li>
+                                                <li id="menu-item-312" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-312 {{ request->routeIs('family.members') ? 'current-menu-item' : '' }}"><a href="{{ route('family.members') }}">أفراد العائلة</a></li>
+                                                <li id="menu-item-314" class="menu-item menu-item-type-post_type menu-item-object-lsvr_family_member {{ request->routeIs('family.member') ? 'current-menu-item' : '' }} menu-item-314"><a href="{{ route('family.member', ['id' => 1]) }}" aria-current="page">شجرة العائلة</a></li>
+                                                <!-- <li id="menu-item-313" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313"><a href="https://preview.lsvr.sk/lineago/family-timeline/">Family Timeline</a></li> -->
                                             </ul>
                                         </div>
                                     </div>
@@ -39,15 +39,15 @@
                                     <div class="widget__inner">
                                         <div class="menu-footer-widgets-menu-2-container">
                                             <ul id="menu-footer-widgets-menu-2" class="menu">
-                                                <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="https://preview.lsvr.sk/lineago/family-history/">Lewis History</a></li>
-                                                <li id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-315"><a href="https://preview.lsvr.sk/lineago/family-blog/">Family Blog</a></li>
-                                                <li id="menu-item-317" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-317"><a href="https://preview.lsvr.sk/lineago/galleries/">Galleries</a></li>
+                                                <!-- <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="#">Lewis History</a></li> -->
+                                                <li id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-315"><a href="#">الاخبار</a></li>
+                                                <li id="menu-item-317" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-317"><a href="https://preview.lsvr.sk/lineago/galleries/">معرض الصور</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="footer-widgets__col">
+                            <!-- <div class="footer-widgets__col">
                                 <div id="nav_menu-4" class="widget widget_nav_menu">
                                     <div class="widget__inner">
                                         <div class="menu-footer-widgets-menu-3-container">
@@ -59,7 +59,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
