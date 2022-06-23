@@ -178,14 +178,14 @@
                                     <!-- POST TITLE : begin -->
                                     <h2 class="post__title">
                                         <a href="{{ route('family.member', ['id' => $person->id]) }}" class="post__title-link">
-                                            {{ $person->name }} </a>
+                                            {{ $person->name }} {{ $person->another_name ? "( $person->another_name )" : "" }} </a>
                                     </h2>
                                     <!-- POST TITLE : end -->
 
 
                                     <!-- POST DATE : begin -->
                                     <p class="post__date">
-                                        ({{ $person->dateOfBirth }}) </p>
+                                        {{ $person->dateOfBirth ? "( $person->dateOfBirth )" : "" }} </p>
                                     <!-- POST DATE : end -->
 
 

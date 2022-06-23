@@ -90,7 +90,7 @@
 				
 				
 										<span class="core-header__info-age">
-											{{ $person->another_name ? '('. $person->another_name .')' : ' ' }}  </span>
+											{{ $person->another_name ? "( $person->another_name )" : "" }}  </span>
 				
 				
 									</p>

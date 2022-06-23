@@ -55,7 +55,7 @@
                                             <!-- CARD TITLE : begin -->
                                             <h4 class="family-tree__card-title">
                                                 <a href="{{ route('family.member' ,['id' => $person->id]) }}" class="family-tree__card-title-link">
-                                                    {{ $person->name }} </a>
+                                                    {{ $person->name }} {{ $person->another_name ? "($person->another_name)" : "" }}</a>
                                             </h4>
                                             <!-- CARD TITLE : end -->
 
@@ -119,7 +119,7 @@
                                                     <!-- CARD TITLE : begin -->
                                                     <h4 class="family-tree__card-title">
                                                         <a href="{{ route('family.member' ,['id' => $wife->id]) }}" class="family-tree__card-title-link">
-                                                            {{ $wife->name }} </a>
+                                                            {{ $wife->name }} {{ $wife->another_name ? "($wife->another_name)" : "" }}</a>
                                                     </h4>
                                                     <!-- CARD TITLE : end -->
 
@@ -185,7 +185,7 @@
                                                     <!-- CARD TITLE : begin -->
                                                     <h4 class="family-tree__card-title">
                                                         <a href="{{ route('family.member' ,['id' => $husband->id]) }}" class="family-tree__card-title-link">
-                                                            {{ $husband->name }} </a>
+                                                            {{ $husband->name }} {{ $husband->another_name ? "($husband->another_name)" : "" }}</a>
                                                     </h4>
                                                     <!-- CARD TITLE : end -->
 
@@ -263,7 +263,7 @@
                                                     <!-- CARD TITLE : begin -->
                                                     <h4 class="family-tree__card-title">
                                                         <a href="{{ route('family.member' ,['id' => $child->id]) }}" class="family-tree__card-title-link">
-                                                            {{ $child->name }} </a>
+                                                            {{ $child->name }} {{ $child->another_name ? "($child->another_name)" : "" }} </a>
                                                     </h4>
                                                     <!-- CARD TITLE : end -->
 
@@ -318,7 +318,7 @@
     </div>
     <!-- FAMILY TREE BRANCH : end -->
 
-    <template x-for="branch in branches" :key="branch.person.id">
+    <template x-for="(branch, branchIndex) in branches" :key="branch.person.id">
         <!-- FAMILY TREE BRANCH : begin -->
         <div class="family-tree__branch family-tree-page__branch--has-partners family-tree-page__branch--has-children" data-cols-num="4" data-root-id="77">
             <div class="family-tree__branch-inner">
@@ -359,14 +359,14 @@
 
                                                 <!-- CARD TITLE : begin -->
                                                 <h4 class="family-tree__card-title">
-                                                    <a :href="`family-member/?id=${branch.person.id}`" class="family-tree__card-title-link" x-text="branch.person.name">
+                                                    <a :href="`family-member/?id=${branch.person.id}`" class="family-tree__card-title-link" x-text="`${branch.person.name} ${branch.person.another_name ? '(' + branch.person.another_name + ')' : ''}`">
                                                     </a>
                                                 </h4>
                                                 <!-- CARD TITLE : end -->
 
 
                                                 <!-- CARD DATE : begin -->
-                                                <p class="family-tree__card-date" x-text="`(${branch.person.dateOfBirth} - ${branch.person.dateOfDeath})`">
+                                                <p class="family-tree__card-date" x-text="`(${branch.person.dateOfBirth ?? ''} - ${branch.person.dateOfDeath ?? ''})`">
                                                 </p>
                                                 <!-- CARD DATE : end -->
 
@@ -424,14 +424,14 @@
 
                                                     <!-- CARD TITLE : begin -->
                                                     <h4 class="family-tree__card-title">
-                                                        <a :href="`family-member/?id=${partner.id}`" class="family-tree__card-title-link" x-text="partner.name">
+                                                        <a :href="`family-member/?id=${partner.id}`" class="family-tree__card-title-link" x-text="`${partner.name} ${partner.another_name ? '(' + partner.another_name + ')' : ''}`">
                                                         </a>
                                                     </h4>
                                                     <!-- CARD TITLE : end -->
 
 
                                                     <!-- CARD DATE : begin -->
-                                                    <p class="family-tree__card-date" x-text="`(${partner.dateOfBirth} - ${partner.dateOfDeath})`">
+                                                    <p class="family-tree__card-date" x-text="`(${partner.dateOfBirth ?? ''} - ${partner.dateOfDeath ?? ''})`">
                                                          </p>
                                                     <!-- CARD DATE : end -->
 
@@ -503,14 +503,14 @@
 
                                                         <!-- CARD TITLE : begin -->
                                                         <h4 class="family-tree__card-title">
-                                                            <a :href="`family-member/?id=${child.id}`" class="family-tree__card-title-link" x-text="child.name">
+                                                            <a :href="`family-member/?id=${child.id}`" class="family-tree__card-title-link" x-text="`${child.name} ${'(' + child.another_name + ')' ?? ''}`">
                                                             </a>
                                                         </h4>
                                                         <!-- CARD TITLE : end -->
 
 
                                                         <!-- CARD DATE : begin -->
-                                                        <p class="family-tree__card-date" x-text="`(${child.dateOfBirth} - ${child.dateOfDeath})`">
+                                                        <p class="family-tree__card-date" x-text="`(${child.dateOfBirth ?? ''} - ${child.dateOfDeath ?? ''})`">
                                                              </p>
                                                         <!-- CARD DATE : end -->
 
@@ -529,7 +529,7 @@
                                                         <span class="family-tree__card-option-spinner lsvr-spinner" aria-hidden="true"></span>
                                                     </a> -->
                                                     <template x-if="child.hasChildren">
-                                                        <button @click="$wire.getChildBranch(child.id, 1)" class="family-tree__card-option" title="Branch">
+                                                        <button @click="$wire.getChildBranch(child.id, branchIndex + 1)" class="family-tree__card-option" title="Branch">
                                                             <i class="la la-sitemap"></i>
                                                             <span class="family-tree__card-option-spinner lsvr-spinner" aria-hidden="true"></span>
                                                         </button>
