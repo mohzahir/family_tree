@@ -67,18 +67,16 @@ class FamilyController extends Controller
 
                 //ensure father is exist or add it
                 $father_id = $request->father_id;
-                $father = Person::find($father_id);
-                if (!$father) {
+                if (!is_numeric($father_id)) {
                     $father_id = Person::insertGetId([
                         'name' => $request->father_id,
-                        'gender' => 'male',
+                        'gender' => 'female',
                     ]);
                 }
 
                 //ensure mother is exist or add it
                 $mother_id = $request->mother_id;
-                $mother = Person::find($mother_id);
-                if (!$mother) {
+                if (!is_numeric($mother_id)) {
                     $mother_id = Person::insertGetId([
                         'name' => $request->mother_id,
                         'gender' => 'female',
@@ -103,15 +101,27 @@ class FamilyController extends Controller
                 if ($request->sons_count > 0 && count($request->sons) > 0) {
                     foreach ($request->sons as $key => $son_id) {
                         if ($son_id) {
-                            $son = Person::find($son_id);
-                            if (!$son) {
-                                Person::insert([
-                                    'name' => $son_id,
-                                    'gender' => 'male',
+                            // $son = Person::find($son_id);
+                            // if (!$son) {
+                            //     Person::insert([
+                            //         'name' => $son_id,
+                            //         'gender' => 'male',
+                            //         'son_family_id' => $family_id
+                            //     ]);
+                            // } else {
+                            //     $son->update([
+                            //         'son_family_id' => $family_id
+                            //     ]);
+                            // }
+                            if (is_numeric($son_id)) {
+                                $son = Person::find($son_id);
+                                $son->update([
                                     'son_family_id' => $family_id
                                 ]);
                             } else {
-                                $son->update([
+                                Person::insert([
+                                    'name' => $son_id,
+                                    'gender' => 'male',
                                     'son_family_id' => $family_id
                                 ]);
                             }
@@ -124,15 +134,27 @@ class FamilyController extends Controller
                     foreach ($request->daughters as $key => $daughter_id) {
                         if ($daughter_id) {
 
-                            $daughter = Person::find($daughter_id);
-                            if (!$daughter) {
-                                Person::insert([
-                                    'name' => $daughter_id,
-                                    'gender' => 'female',
+                            // $daughter = Person::find($daughter_id);
+                            // if (!$daughter) {
+                            //     Person::insert([
+                            //         'name' => $daughter_id,
+                            //         'gender' => 'female',
+                            //         'son_family_id' => $family_id
+                            //     ]);
+                            // } else {
+                            //     $daughter->update([
+                            //         'son_family_id' => $family_id
+                            //     ]);
+                            // }
+                            if (is_numeric($daughter_id)) {
+                                $daughter = Person::find($daughter_id);
+                                $daughter->update([
                                     'son_family_id' => $family_id
                                 ]);
                             } else {
-                                $daughter->update([
+                                Person::insert([
+                                    'name' => $daughter_id,
+                                    'gender' => 'male',
                                     'son_family_id' => $family_id
                                 ]);
                             }
