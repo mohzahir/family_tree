@@ -19,7 +19,7 @@
 
 
                             <p class="core-header__subtitle lsvr-secondary-font">
-                                بدت هذه القصة في سنة 1946,<br>منذ لحظة ولادة  <a href="https://preview.lsvr.sk/lineago/family/john-lewis/"> عبود </a> </p>
+                                بدت هذه القصة في سنة 1946,<br>منذ لحظة ولادة  <a href="#"> عبود </a> </p>
 
 
                         </div>

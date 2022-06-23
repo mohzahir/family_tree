@@ -7,4 +7,10 @@
     .family-tree--4-cols .family-tree__grid{
         grid-template-columns: none;
     }
+    .family-tree__grid{
+        row-gap: 60px !important; 
+    }
+    .lsvr_family_member-archive--grid .post-archive__grid{
+        row-gap: 30px !important;
+    }
 }

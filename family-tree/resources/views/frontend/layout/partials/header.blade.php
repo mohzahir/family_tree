@@ -48,7 +48,7 @@
 
                                 <li id="header-menu-primary__item-332" class="header-menu-primary__item header-menu-primary__item--level-0 menu-item menu-item-type-post_type menu-item-object-page" role="presentation">
 
-                                    <a href="https://preview.lsvr.sk/lineago/family-history/" id="header-menu-primary__item-link-332" class="header-menu-primary__item-link header-menu-primary__item-link--level-0" role="menuitem">
+                                    <a href="#" id="header-menu-primary__item-link-332" class="header-menu-primary__item-link header-menu-primary__item-link--level-0" role="menuitem">
 
                                         <span class="header-menu-primary__item-link-label">التاريخ</span>
 
@@ -61,7 +61,7 @@
 
                                 <li id="header-menu-primary__item-331" class="header-menu-primary__item header-menu-primary__item--level-0 menu-item menu-item-type-post_type menu-item-object-page current_page_parent" role="presentation">
 
-                                    <a href="https://preview.lsvr.sk/lineago/family-blog/" id="header-menu-primary__item-link-331" class="header-menu-primary__item-link header-menu-primary__item-link--level-0" role="menuitem">
+                                    <a href="#" id="header-menu-primary__item-link-331" class="header-menu-primary__item-link header-menu-primary__item-link--level-0" role="menuitem">
 
                                         <span class="header-menu-primary__item-link-label">الاخبار</span>
 
@@ -74,7 +74,7 @@
 
                                 <li id="header-menu-primary__item-337" class="header-menu-primary__item header-menu-primary__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" role="presentation">
 
-                                    <a href="https://preview.lsvr.sk/lineago/galleries/" id="header-menu-primary__item-link-337" class="header-menu-primary__item-link header-menu-primary__item-link--level-0" role="menuitem">
+                                    <a href="#" id="header-menu-primary__item-link-337" class="header-menu-primary__item-link header-menu-primary__item-link--level-0" role="menuitem">
 
                                         <span class="header-menu-primary__item-link-label">معرض الصور</span>
 
@@ -96,7 +96,7 @@
                         <div id="header-search" class="header-search" role="group" aria-expanded="false">
 
                             <!-- SEARCH FORM : begin -->
-                            <form class="header-search__form" action="https://preview.lsvr.sk/lineago/" method="get" role="search">
+                            <form class="header-search__form" action="#" method="get" role="search">
 
 
                                 <label for="header-search-input" class="header-search__input-label screen-reader-text">Search</label>
