@@ -79,7 +79,8 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="companyName">الاب</label>
+                                                        <label for="companyName">الاب <strong class="text-danger text-sm">*مطلوب</strong></label>
+                                                        <p class="text-sm text-danger">الرجاء اختيار الاسماء المقترحة من قبل النظام في حال وجودها</p>
                                                         <select x-init="$($el).select2()" data-tags="true" type="text" class="form-control w-100" name="father_id">
                                                             <option value=""></option>
                                                             @foreach($males as $male)
@@ -90,7 +91,8 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="companyName">الام</label>
+                                                        <label for="companyName">الام <strong class="text-danger text-sm">*مطلوب</strong></label>
+                                                        <p class="text-sm text-danger">الرجاء اختيار الاسماء المقترحة من قبل النظام في حال وجودها</p>
                                                         <select x-init="$($el).select2()" data-tags="true" class="form-control w-100" name="mother_id">
                                                             <option value=""></option>
                                                             @foreach($females as $female)
