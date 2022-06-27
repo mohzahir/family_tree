@@ -64,6 +64,15 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
+        // 'pgsql' => [
+        //     'driver' => 'pgsql',
+        //     'host' => env('DB_HOST', 'localhost'),
+        //     'port' => env('DB_PORT', '5432'),
+        //     'database' => env('DB_DATABASE', 'yemeqjyl_jumaa'),
+        //     'username' => env('DB_USERNAME', 'postgres'),
+        //     'password' => env('DB_PASSWORD', '123456'),
+        //     'charset' => 'utf8',
+        // ],
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => $DATABASE_URL["host"],

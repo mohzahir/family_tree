@@ -15,7 +15,7 @@ class FrontendController extends Controller
             $persons = Person::where('name', 'like', '%' . $request->searchText . '%')->get();
             return view('frontend.search', ['searchText' => $request->input('searchText'), 'persons' => $persons]);
         }
-        $featured_people = Person::where('is_featured', 1)->get();
+        $featured_people = Person::where('is_featured', '1')->get();
         // dd($featured_people);
 
         return view('frontend.welcome', ['featured_people' => $featured_people]);
