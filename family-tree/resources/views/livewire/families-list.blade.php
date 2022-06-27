@@ -120,7 +120,7 @@
                                         </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td x-data="">
                                         <span class="dropdown">
                                         <button id="btnSearchDrop2" type="button" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="ft-settings"></i></button>
