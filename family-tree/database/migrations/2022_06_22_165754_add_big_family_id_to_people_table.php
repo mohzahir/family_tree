@@ -14,7 +14,7 @@ class AddBigFamilyIdToPeopleTable extends Migration
     public function up()
     {
         Schema::table('people', function (Blueprint $table) {
-            $table->unsignedBigInteger('big_family_id');
+            $table->unsignedBigInteger('big_family_id')->nullable();
             $table->foreign(['big_family_id'])->references('id')->on('big_families');
         });
     }
