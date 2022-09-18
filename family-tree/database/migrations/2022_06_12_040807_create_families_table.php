@@ -15,8 +15,6 @@ class CreateFamiliesTable extends Migration
     {
         Schema::create('families', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('big_family_id');
-            $table->foreign('big_family_id')->references('id')->on('big_families');
             $table->unsignedBigInteger('father_id');
             $table->foreign('father_id')->references('id')->on('people');
             $table->unsignedBigInteger('mother_id');
