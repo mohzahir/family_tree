@@ -9,6 +9,7 @@ class Person extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'big_family_id',
         'son_family_id',
         'country_id',
         'city_id',
@@ -27,6 +28,10 @@ class Person extends Model
     public function family()
     {
         return $this->belongsTo(Family::class, 'son_family_id');
+    }
+    public function bigFamily()
+    {
+        return $this->belongsTo(BigFamily::class, 'big_family_id');
     }
     public function country()
     {

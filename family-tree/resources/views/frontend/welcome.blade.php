@@ -15,11 +15,11 @@
                         <div class="core-header__heading">
 
                             <h1 class="core-header__title">
-                                شجرة عائلة عبود </h1>
+                                نظام شجرة العائلة </h1>
 
 
                             <p class="core-header__subtitle lsvr-secondary-font">
-                                بدت هذه القصة في سنة 1946,<br>منذ لحظة ولادة  <a href="#"> عبود </a> </p>
+                                مرحبا بكم في نظام شجرة العائلة,
 
 
                         </div>
@@ -42,7 +42,7 @@
 
                                 <label for="core-header-search-input" class="core-header-search__input-label screen-reader-text">Search</label>
 
-                                <input id="core-header-search-input" type="text" name="searchText" autocomplete="off" class="core-header-search__input" placeholder="ابحث عن الافراد هنا" aria-label="Search field">
+                                <input id="core-header-search-input" value="{{ request('searchText') }}" type="text" name="searchText" autocomplete="off" class="core-header-search__input" placeholder="ابحث عن العوائل هنا" aria-label="Search field">
 
                                 <button class="core-header-search__submit" type="submit" title="Submit search">
                                     <!-- <span class="core-header-search__submit-icon" aria-hidden="true"></span> -->
@@ -69,8 +69,8 @@
         <!-- CORE HEADER BACKGROUND : begin -->
         <div class="core-header__bg core-header__bg--loading">
 
-            <div class="core-header__bg-image" style="background-image: url( {{ asset('files/IMG-20210815-WA0064.jpg') }} );">
-                <img src="asset('files/IMG-20210815-WA0064.jpg') }}" class="core-header__bg-img" aria-hidden="true" alt="">
+            <div class="core-header__bg-image" style="background-image: url( {{ asset('files/R.png') }} );background-size: contain;">
+                <img src="asset('files/R.png') }}" class="core-header__bg-img" aria-hidden="true" alt="">
             </div>
 
             <div class="core-header__bg-overlay" style="opacity: 0.5"></div>
@@ -87,84 +87,6 @@
     <div class="post__content">
 
 
-        <!-- LINEAGO CTA : begin -->
-        <section class="lineago-cta-list lineago-cta-list--4-items">
-            <div class="lineago-cta-list__inner">
-
-                <div class="lsvr-container">
-                    <ul class="lineago-cta-list__list">
-
-
-
-                        <li class="lineago-cta-list__item">
-
-                            <h3 class="lineago-cta-list__item-title">
-                                تعرف على<br>افراد العائلة </h3>
-
-                            <a href="{{ route('family.members')}}" class="lineago-cta-list__item-link">
-                                <i class="la la-arrow-right"></i>
-                                <span class="lineago-cta-list__item-label">الذهاب الى افراد العائلة</span>
-                                <!-- <span class="lineago-cta-list__item-icon" aria-hidden="true"></span> -->
-                            </a>
-
-                        </li>
-
-
-
-
-                        <li class="lineago-cta-list__item">
-
-                            <h3 class="lineago-cta-list__item-title">
-                                تصفح شجرة عائلة<br>عبود </h3>
-
-                            <a href="{{ route('family.member', ['id' => 1]) }}" class="lineago-cta-list__item-link">
-                                <i class="la la-arrow-right"></i>
-                                <span class="lineago-cta-list__item-label">الذهاب الى شجرة العائلة</span>
-                                <!-- <span class="lineago-cta-list__item-icon" aria-hidden="true"></span> -->
-                            </a>
-
-                        </li>
-
-
-
-
-                        <li class="lineago-cta-list__item">
-
-                            <h3 class="lineago-cta-list__item-title">
-                                اشهد تاريخ العائلة<br>من خلال الاحداث </h3>
-
-                            <a href="#" class="lineago-cta-list__item-link">
-                                <i class="la la-arrow-right"></i>
-                                <span class="lineago-cta-list__item-label">الذهاب الى تسلسل الاحداث</span>
-                                <!-- <span class="lineago-cta-list__item-icon" aria-hidden="true"></span> -->
-                            </a>
-
-                        </li>
-
-
-
-
-                        <li class="lineago-cta-list__item">
-
-                            <h3 class="lineago-cta-list__item-title">
-                                شاهد صور<br>الماضي &amp; الحاضر </h3>
-
-                            <a href="#" class="lineago-cta-list__item-link">
-                                <i class="la la-arrow-right"></i>
-                                <span class="lineago-cta-list__item-label">فتح معرض الصور</span>
-                                <!-- <span class="lineago-cta-list__item-icon" aria-hidden="true"></span> -->
-                            </a>
-
-                        </li>
-
-
-
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-        <!-- LINEAGO CTA : end -->
 
 
 
@@ -175,101 +97,53 @@
                 <div class="lsvr-container">
 
                     
-                    @if(count($featured_people) > 0)
                     <!-- SECTION HEADER : begin -->
                     <header class="lineago-anniversaries__header">
 
                         <h2 class="lineago-anniversaries__header-title">
-                            الشخصيات المميزة </h2>
+                            جميع العوائل المسجلة </h2>
 
 
-                        <p class="lineago-anniversaries__header-more">
+                        <!-- <p class="lineago-anniversaries__header-more">
 
                             <a href="{{ route('family.member', 1) }}" class="lineago-anniversaries__header-more-link">
                                 <span class="lineago-anniversaries__header-more-label">الذهاب لشجرة العائلة</span>
                                 <span class="lineago-anniversaries__header-more-icon" aria-hidden="true"></span>
                             </a>
-
-                        </p>
-
-
+                            
+                        </p> -->
+                        
+                        
                     </header>
                     <!-- SECTION HEADER : end -->
-
-
-
+                    
+                    
+                    
                     <!-- SECTION GRID : begin -->
-                    <div class="lineago-anniversaries__grid">
-
-                        @foreach($featured_people as $person)
-                        <!-- GRID COL : begin -->
-                        <div class="lineago-anniversaries__grid-col">
-
-                            <!-- GRID ITEM : begin -->
-                            <div class="lineago-anniversaries__item">
-                                <div class="lineago-anniversaries__item-inner">
-
-                                    <!-- ITEM DATE : begin -->
-                                    <!-- <h3 class="lineago-anniversaries__item-date" title="June 26, 2022">
-
-                                        <span class="lineago-anniversaries__item-date-month">
-                                            Jun </span>
-
-                                        <span class="lineago-anniversaries__item-date-day">
-                                            26 </span>
-
-                                    </h3> -->
-                                    <!-- ITEM DATE : end -->
-
-                                    <!-- ITEM CONTENT : begin -->
-                                    <div class="lineago-anniversaries__item-content">
-                                        <div class="lineago-anniversaries__item-content-inner">
-
-                                            <!-- ITEM TITLE : begin -->
-                                            <h4 class="lineago-anniversaries__item-title">
-                                                <a href="{{ route('family.member', ['id' => $person->id]) }}" class="lineago-anniversaries__item-title-link">
-                                                    {{ $person->name }} </a>
-                                            </h4>
-                                            <!-- ITEM TITLE : end -->
-
-                                            <!-- ITEM LIFESPAN : begin -->
-                                            <p class="lineago-anniversaries__item-lifespan">
-                                                {{ $person->dateOfDeath ? '(' . $person->dateOfDeath . ')' : '' }} </p>
-                                            <!-- ITEM LIFESPAN : end -->
-
-
-                                        </div>
-                                    </div>
-                                    <!-- ITEM CONTENT : end -->
-
-                                    <!-- ITEM THUMB : begin -->
-                                    @if($person->photo)
-                                    <p class="lineago-anniversaries__item-thumb">
-                                        <a href="{{ route( 'family.member', ['id' => $person->id] ) }}" class="lineago-anniversaries__item-thumb-link" style="background-image: url({{ asset($person->photo) }});">
-                                            <span class="screen-reader-text">Go to profile page</span>
-                                        </a>
-                                    </p>
-                                    @else
-                                    <p class="lineago-anniversaries__item-thumb">
-                                        <a href="{{ route( 'family.member', ['id' => $person->id] ) }}" class="lineago-anniversaries__item-thumb-link" style="background-image: url({{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }});">
-                                            <span class="screen-reader-text">Go to profile page</span>
-                                        </a>
-                                    </p>
-                                    @endif
-                                    <!-- ITEM THUMB : end -->
-
-                                </div>
-                            </div>
-                            <!-- GRID ITEM : end -->
-
-                        </div>
-                        <!-- GRID COL : begin -->
+                    <div class="">
+                        
+                        @if(count($big_families) > 0)
+                        @foreach($big_families as $big_family)
+                        
+                        <p class="lsvr-info-message">
+                            <!-- <span class="lsvr-info-message__icon" aria-hidden="true"></span> -->
+                            <span style="position: absolute;top: 32px;left: 30px;font-size: 22px;" class="la la-arrow-right"></span>
+                            <a href="{{ route('family.member', ['id' => $big_family->main_person_id]) }}">{{ $big_family->name }} </a>
+                        </p>
+                        
                         @endforeach
+                        @else
+                        <p class="lsvr-info-message">
+                            <!-- <span class="lsvr-info-message__icon" aria-hidden="true"></span> -->
+                            <span style="position: absolute;top: 32px;left: 30px;font-size: 22px;" class="la la-arrow-close"></span>
+                            <a href="{{ route('family.home') }}"> لا توجد نتائج لهذا البحث عرض جميع العوائل ؟ </a>
+                        </p>
+
+                        @endif
                         
                         
                     </div>
                     <!-- SECTION GRID : end -->
-                    @endif
 
 
                 </div>

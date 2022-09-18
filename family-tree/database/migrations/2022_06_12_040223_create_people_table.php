@@ -15,6 +15,8 @@ class CreatePeopleTable extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('big_family_id');
+            $table->foreign(['big_family_id'])->references('id')->on('big_families');
             $table->unsignedBigInteger('country_id')->nullable();
             $table->foreign(['country_id'])->references('id')->on('countries');
             $table->unsignedBigInteger('city_id')->nullable();

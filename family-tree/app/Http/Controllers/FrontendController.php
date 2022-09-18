@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BigFamily;
 use App\Models\Family;
 use App\Models\Person;
 use Illuminate\Http\Request;
@@ -11,14 +12,18 @@ class FrontendController extends Controller
 
     public function showHome(Request $request)
     {
-        if ($request->input('searchText')) {
-            $persons = Person::where('name', 'like', '%' . $request->searchText . '%')->get();
-            return view('frontend.search', ['searchText' => $request->input('searchText'), 'persons' => $persons]);
-        }
-        $featured_people = Person::where('is_featured', '1')->get();
+        // if ($request->input('searchText')) {
+        //     $persons = Person::where('name', 'like', '%' . $request->searchText . '%')->get();
+        //     return view('frontend.search', ['searchText' => $request->input('searchText'), 'persons' => $persons]);
+        // }
+        $big_families = BigFamily::query()
+            ->when($request->input('searchText'), function ($q) use ($request) {
+                $q->where('name', 'like', '%' . $request->searchText . '%');
+            })
+            ->get();
         // dd($featured_people);
 
-        return view('frontend.welcome', ['featured_people' => $featured_people]);
+        return view('frontend.welcome', ['big_families' => $big_families]);
     }
 
     public function showFamilyMember(Request $request)

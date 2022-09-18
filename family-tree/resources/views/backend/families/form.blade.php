@@ -165,6 +165,7 @@
                                                     let container = source == 'male' ? $($refs.sons_container) : $($refs.daughters_container);
                                                     let sons_template = `
                                                         <div class='form-group mt-2'>
+                                                            <label class='text-danger'>قم بادخال الاسم الاول فقط</label>
                                                             <select  x-init='$($el).select2()' data-tags='true' type='text' placeholder='ادخل الاسم' class='form-control' name='sons[]'>
                                                                 <option value=''>اختر الابن</option>
                                                                 <template x-for='son in sons'>
@@ -175,6 +176,7 @@
                                                     `;
                                                     let daughters_template = `
                                                         <div class='form-group mt-2'>
+                                                            <label class='text-danger'>قم بادخال الاسم الاول فقط</label>
                                                             <select  x-init='$($el).select2()' data-tags='true' type='text' placeholder='ادخل الاسم' class='form-control' name='daughters[]'>
                                                                 <option value=''>اختر الابنة</option>
                                                                 <template x-for='son in daughters'>

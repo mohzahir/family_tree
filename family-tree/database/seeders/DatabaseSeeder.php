@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             CitySeeder::class,
             PersonSeeder::class,
             FamilySeeder::class,
+            BigFamilySeeder::class,
         ]);
     }
 }

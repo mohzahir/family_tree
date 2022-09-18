@@ -23,7 +23,7 @@ class PeopleList extends Component
     public function render()
     {
         return view('livewire.people-list', [
-            'data' => Person::orderBy('id', 'desc')
+            'data' => Person::where('big_family_id', auth()->user()->big_family_id)->orderBy('id', 'desc')
                 ->when($this->searchText, function ($q) {
                     $q->where('name', "like", "%" . $this->searchText . "%");
                 })

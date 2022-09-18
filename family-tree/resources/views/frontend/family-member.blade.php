@@ -25,7 +25,7 @@
 				
 												<li class="breadcrumbs__item">
 													<span class="breadcrumbs__item-decor" aria-hidden="true"></span>
-													<a href="{{ route('family.member', ['id' => $person->id]) }}" class="breadcrumbs__link">اعضاء العائلة</a>
+													<a href="{{ route('family.member', ['id' => $person->id]) }}" class="breadcrumbs__link">{{ $person->bigFamily->name }}</a>
 												</li>
 				
 				
@@ -111,11 +111,11 @@
 					<!-- CORE HEADER BACKGROUND : begin -->
 					<div class="core-header__bg core-header__bg--loading">
 				
-						<div class="core-header__bg-image" style="background-image: url( 'https://preview.lsvr.sk/lineago/wp-content/uploads/sites/8/2022/01/header_bg_01_blur.jpg' );">
+						<div class="core-header__bg-image" style="background-image: url( {{ asset('files/R.png') }} );background-size: contain;">
 							<img src="https://preview.lsvr.sk/lineago/wp-content/uploads/sites/8/2022/01/header_bg_01_blur.jpg" class="core-header__bg-img" aria-hidden="true" alt="">
 						</div>
 				
-						<div class="core-header__bg-overlay" style="opacity: 0.2"></div>
+						<div class="core-header__bg-overlay" style="opacity: 0.5"></div>
 				
 					</div>
 					<!-- PAGE BACKGROUND : end -->

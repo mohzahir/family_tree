@@ -121,15 +121,15 @@
                                         </div>
                                     </td>
                                     <td x-data="">
-                                        <span class="dropdown">
-                                        <button id="btnSearchDrop2" type="button" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="ft-settings"></i></button>
-                                        <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
-                                            <a href="{{ route('family.edit', $item->id) }}" class="dropdown-item"><i class="ft-edit-2 primary"></i> تعديل</a>
-                                            <button @click="x = confirm(`هل انت متاكد ؟`); if(x){ $wire.delete({{$item->id}}) }" class="dropdown-item"><i class="ft-trash-2 danger"></i> حذف</button>
-                                            <a href="{{ route('family.show', $item->id) }}" class="dropdown-item"><i class="ft-eye success"></i> معاينه</a>
-                                        </span>
-                                        </span>
+                                        <a href="{{ route('family.show', $item->id) }}" class="btn btn-sm btn-social-icon mr-1 btn-outline-warning">
+                                            <span class="la la-eye font-medium-4"></span>
+                                        </a>
+                                        <a href="{{ route('family.edit', $item->id) }}" class="btn btn-sm btn-social-icon mr-1 btn-outline-primary">
+                                            <span class="la la-edit"></span>
+                                        </a>
+                                        <button @click="x = confirm(`هل انت متاكد ؟`); if(x){ $wire.delete({{$item->id}}) }" class="btn btn-sm btn-social-icon  btn-outline-danger">
+                                            <span class="la la-trash"></span>
+                                        </button>
                                     </td>
                                 </tr>
                                 @endforeach

@@ -51,6 +51,7 @@ class PersonController extends Controller
 
         //Add person data
         Person::create([
+            'big_family_id' => auth()->user()->big_family_id,
             'country_id' => $request->country_id,
             'city_id' => $request->city_id,
             'name' => $request->name,

@@ -17,6 +17,7 @@ class FamilySeeder extends Seeder
     {
         DB::table('families')->insert([
             [
+                'big_family_id' => 1,
                 'father_id' => 1,
                 'mother_id' => 2,
                 'country_id' => 1,

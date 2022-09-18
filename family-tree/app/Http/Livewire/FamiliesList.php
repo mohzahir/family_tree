@@ -25,7 +25,7 @@ class FamiliesList extends Component
     public function render()
     {
         return view('livewire.families-list', [
-            'data' => Family::orderBy('families.id', 'desc')->select(['people.id as person_id', 'people.name', 'families.id as id', 'families.father_id', 'families.mother_id'])
+            'data' => Family::where('families.big_family_id', auth()->user()->big_family_id)->orderBy('families.id', 'desc')->select(['people.id as person_id', 'people.name', 'families.id as id', 'families.father_id', 'families.mother_id'])
                 ->join('people', 'people.id', 'families.father_id')
                 ->when($this->searchText, function ($q) {
                     $q->where('people.name', "like", "%" . $this->searchText . "%");

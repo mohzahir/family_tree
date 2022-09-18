@@ -15,6 +15,7 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
+            'big_family_id' => 1,
             'name' => 'هاشم بشير خالد',
             'email' => 'admin@gmail.com',
             'email_verified_at' => now(),

@@ -25,11 +25,22 @@
                         </a>
                     </div> --}}
                     <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2">
-                        <span>قم بادخال بيانات الحساب</span>
+                        <span> بيانات العائلة</span>
                     </p>
                     <div class="card-body pt-0">
-                        <form class="form-horizontal" action="{{route('login.post')}}" method="POST">
+                        <form class="form-horizontal" action="{{route('register.post')}}" method="POST">
                             @csrf
+                            <fieldset class="form-group floating-label-form-group">
+                                <label for="user-name">اسم العائلة</label>
+                                <input type="text" class="form-control" name="name" id="user-name" placeholder="اسم العائلة">
+                            </fieldset>
+                            <fieldset class="form-group floating-label-form-group">
+                                <label for="user-name">اسم الشخصية الاساسية</label>
+                                <input type="text" class="form-control" name="main_person_name" id="user-name" placeholder="اسم الشخص">
+                            </fieldset>
+                            <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2">
+                                <span> بيانات الحساب</span>
+                            </p>
                         <fieldset class="form-group floating-label-form-group">
                             <label for="user-name">الايميل</label>
                             <input type="text" class="form-control" name="email" id="user-name" placeholder="admin@example.com">
@@ -38,7 +49,7 @@
                             <label for="user-password">كلمة السر</label>
                             <input type="password" class="form-control" name="password" id="user-password" placeholder="****">
                         </fieldset>
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <div class="col-md-6 col-12 text-center text-sm-left">
                             <fieldset>
                                 <input type="checkbox" id="remember-me" class="chk-remember">
@@ -46,15 +57,15 @@
                             </fieldset>
                             </div>
                             <div class="col-md-6 col-12 float-sm-left text-center text-sm-right"><a href="recover-password.html" class="card-link">نسيت كلمة السر?</a></div>
-                        </div>
-                        <button type="submit" class="btn btn-outline-info btn-block"><i class="ft-unlock"></i> دخول</button>
+                        </div> -->
+                        <button type="submit" class="btn btn-outline-info btn-block"><i class="ft-unlock"></i> تسجيل</button>
                         </form>
                     </div>
                     <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1">
-                        <span>تسجيل عائلة جديدة ?</span>
+                        <span>لديك حساب ?</span>
                     </p>
                     <div class="card-body">
-                        <a href="{{ route('register') }}" class="btn btn-outline-danger btn-block"><i class="ft-user"></i> تسجيل عائلة</a>
+                        <a href="{{ route('login') }}" class="btn btn-outline-danger btn-block"><i class="ft-user"></i> العودة لتسجيل الدخول</a>
                     </div> 
                     </div>
                 </div>

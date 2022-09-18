@@ -70,7 +70,7 @@
 
 
 				<!-- CORE HEADER : begin -->
-				<div class="core-header">
+				<div class="core-header" style="padding-top: 0;">
 
 					{{ $header }}
 				

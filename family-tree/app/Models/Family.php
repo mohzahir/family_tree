@@ -10,6 +10,7 @@ class Family extends Model
     use HasFactory;
 
     protected $fillable = [
+        'big_family_id',
         'father_id',
         'mother_id',
         'country_id',
@@ -38,6 +39,10 @@ class Family extends Model
     public function city()
     {
         return $this->belongsTo(City::class, 'city_id');
+    }
+    public function bigFamily()
+    {
+        return $this->belongsTo(BigFamily::class, 'big_family_id');
     }
 
     public function sons()

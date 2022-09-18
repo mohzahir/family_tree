@@ -36,7 +36,7 @@
 
                                     <!-- CARD THUMB : begin -->
                                     <div class="family-tree__card-thumb">
-                                        @if($person->photo)
+                                        <!-- @if($person->photo)
                                         <a href="{{ asset($person->photo) }}" class="family-tree__card-thumb-link" style="background-image: url( {{ asset($person->photo) }} ) ">
                                             <span class="screen-reader-text">Go to profile page</span>
                                         </a>
@@ -44,7 +44,7 @@
                                         <a href="{{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }}" class="family-tree__card-thumb-link" style="background-image: url( {{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }} );">
                                             <span class="screen-reader-text">Go to profile page</span>
                                         </a>
-                                        @endif
+                                        @endif -->
                                     </div>
                                     <!-- CARD THUMB : end -->
 
@@ -61,8 +61,8 @@
 
 
                                             <!-- CARD DATE : begin -->
-                                            <p class="family-tree__card-date">
-                                                ({{ $person->dateOfBirth }} - {{ $person->dateOfDeath }}) </p>
+                                            <!-- <p class="family-tree__card-date">
+                                                ({{ $person->dateOfBirth }} - {{ $person->dateOfDeath }}) </p> -->
                                             <!-- CARD DATE : end -->
 
 
@@ -100,7 +100,7 @@
 
                                             <!-- CARD THUMB : begin -->
                                             <div class="family-tree__card-thumb">
-                                                @if($wife->photo)
+                                                <!-- @if($wife->photo)
                                                 <a href="{{ asset($wife->photo) }}" class="family-tree__card-thumb-link" style="background-image: url( {{ asset($wife->photo) }} ) ">
                                                     <span class="screen-reader-text">Go to profile page</span>
                                                 </a>
@@ -108,7 +108,7 @@
                                                 <a href="{{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }}" class="family-tree__card-thumb-link" style="background-image: url( {{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }} );">
                                                     <span class="screen-reader-text">Go to profile page</span>
                                                 </a>
-                                                @endif
+                                                @endif -->
                                             </div>
                                             <!-- CARD THUMB : end -->
 
@@ -125,8 +125,8 @@
 
 
                                                     <!-- CARD DATE : begin -->
-                                                    <p class="family-tree__card-date">
-                                                        ({{ $wife->dateOfBirth }} - {{ $wife->dateOfDeath }}) </p>
+                                                    <!-- <p class="family-tree__card-date">
+                                                        ({{ $wife->dateOfBirth }} - {{ $wife->dateOfDeath }}) </p> -->
                                                     <!-- CARD DATE : end -->
 
 
@@ -166,7 +166,7 @@
 
                                             <!-- CARD THUMB : begin -->
                                             <div class="family-tree__card-thumb">
-                                                @if($husband->photo)
+                                                <!-- @if($husband->photo)
                                                 <a href="{{ asset($husband->photo) }}" class="family-tree__card-thumb-link" style="background-image: url( {{ asset($husband->photo) }} ) ">
                                                     <span class="screen-reader-text">Go to profile page</span>
                                                 </a>
@@ -174,7 +174,7 @@
                                                 <a href="{{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }}" class="family-tree__card-thumb-link" style="background-image: url( {{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }} );">
                                                     <span class="screen-reader-text">Go to profile page</span>
                                                 </a>
-                                                @endif
+                                                @endif -->
                                             </div>
                                             <!-- CARD THUMB : end -->
 
@@ -191,8 +191,8 @@
 
 
                                                     <!-- CARD DATE : begin -->
-                                                    <p class="family-tree__card-date">
-                                                        ({{ $husband->dateOfBirth }} - {{ $husband->dateOfDeath }}) </p>
+                                                    <!-- <p class="family-tree__card-date">
+                                                        ({{ $husband->dateOfBirth }} - {{ $husband->dateOfDeath }}) </p> -->
                                                     <!-- CARD DATE : end -->
 
 
@@ -244,7 +244,7 @@
 
                                             <!-- CARD THUMB : begin -->
                                             <div class="family-tree__card-thumb">
-                                                @if($child->photo)
+                                                <!-- @if($child->photo)
                                                 <a href="{{ asset($child->photo) }}" class="family-tree__card-thumb-link" style="background-image: url( {{ asset($child->photo) }} ) ">
                                                     <span class="screen-reader-text">Go to profile page</span>
                                                 </a>
@@ -252,7 +252,7 @@
                                                 <a href="{{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }}" class="family-tree__card-thumb-link" style="background-image: url( {{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }} );">
                                                     <span class="screen-reader-text">Go to profile page</span>
                                                 </a>
-                                                @endif
+                                                @endif -->
                                             </div>
                                             <!-- CARD THUMB : end -->
 
@@ -269,8 +269,8 @@
 
 
                                                     <!-- CARD DATE : begin -->
-                                                    <p class="family-tree__card-date">
-                                                        ({{ $child->dateOfBirth }} - {{ $child->dateOfDeath }}) </p>
+                                                    <!-- <p class="family-tree__card-date">
+                                                        ({{ $child->dateOfBirth }} - {{ $child->dateOfDeath }}) </p> -->
                                                     <!-- CARD DATE : end -->
 
 
@@ -340,7 +340,7 @@
 
                                         <!-- CARD THUMB : begin -->
                                         <div class="family-tree__card-thumb">
-                                            <template x-if="branch.person.photo">
+                                            <!-- <template x-if="branch.person.photo">
                                                 <a  :href="branch.person.photo" class="family-tree__card-thumb-link" :style="{'background-image': `url( ${branch.person.photo} )`}">
                                                     <span class="screen-reader-text">Go to profile page</span>
                                                 </a>
@@ -349,7 +349,7 @@
                                                 <a href="{{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }}" class="family-tree__card-thumb-link" style="background-image: url( {{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }} );">
                                                     <span class="screen-reader-text">Go to profile page</span>
                                                 </a>
-                                            </template>
+                                            </template> -->
                                         </div>
                                         <!-- CARD THUMB : end -->
 
@@ -366,7 +366,7 @@
 
 
                                                 <!-- CARD DATE : begin -->
-                                                <p class="family-tree__card-date" x-text="`(${branch.person.dateOfBirth ?? ''} - ${branch.person.dateOfDeath ?? ''})`">
+                                                <!-- <p class="family-tree__card-date" x-text="`(${branch.person.dateOfBirth ?? ''} - ${branch.person.dateOfDeath ?? ''})`"> -->
                                                 </p>
                                                 <!-- CARD DATE : end -->
 
@@ -405,7 +405,7 @@
 
                                             <!-- CARD THUMB : begin -->
                                             <div class="family-tree__card-thumb">
-                                                <template x-if="partner.photo">
+                                                <!-- <template x-if="partner.photo">
                                                     <a :href="partner.photo" class="family-tree__card-thumb-link" :style="{'background-image': `url( ${partner.photo} )`}">
                                                         <span class="screen-reader-text">Go to profile page</span>
                                                     </a>
@@ -414,7 +414,7 @@
                                                     <a href="{{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }}" class="family-tree__card-thumb-link" style="background-image: url( {{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }} );">
                                                         <span class="screen-reader-text">Go to profile page</span>
                                                     </a>
-                                                </template>
+                                                </template> -->
                                             </div>
                                             <!-- CARD THUMB : end -->
 
@@ -431,8 +431,8 @@
 
 
                                                     <!-- CARD DATE : begin -->
-                                                    <p class="family-tree__card-date" x-text="`(${partner.dateOfBirth ?? ''} - ${partner.dateOfDeath ?? ''})`">
-                                                         </p>
+                                                    <!-- <p class="family-tree__card-date" x-text="`(${partner.dateOfBirth ?? ''} - ${partner.dateOfDeath ?? ''})`">
+                                                         </p> -->
                                                     <!-- CARD DATE : end -->
 
 
@@ -484,7 +484,7 @@
 
                                                 <!-- CARD THUMB : begin -->
                                                 <div class="family-tree__card-thumb">
-                                                    <template x-if="child.photo">
+                                                    <!-- <template x-if="child.photo">
                                                         <a :href="child.photo" class="family-tree__card-thumb-link" :style="{'background-image': `url( ${child.photo} )`}">
                                                             <span class="screen-reader-text">Go to profile page</span>
                                                         </a>
@@ -493,7 +493,7 @@
                                                         <a href="{{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }}" class="family-tree__card-thumb-link" style="background-image: url( {{ asset('template/app-assets/images/portrait/medium/avatar-m-4.png') }} );">
                                                             <span class="screen-reader-text">Go to profile page</span>
                                                         </a>
-                                                    </template>
+                                                    </template> -->
                                                 </div>
                                                 <!-- CARD THUMB : end -->
 
@@ -510,8 +510,8 @@
 
 
                                                         <!-- CARD DATE : begin -->
-                                                        <p class="family-tree__card-date" x-text="`(${child.dateOfBirth ?? ''} - ${child.dateOfDeath ?? ''})`">
-                                                             </p>
+                                                        <!-- <p class="family-tree__card-date" x-text="`(${child.dateOfBirth ?? ''} - ${child.dateOfDeath ?? ''})`">
+                                                             </p> -->
                                                         <!-- CARD DATE : end -->
 
 

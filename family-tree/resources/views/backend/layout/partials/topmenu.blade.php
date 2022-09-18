@@ -18,5 +18,11 @@
                 <span> الافراد </span>
             </a>
         </li>
+        <li @class(['nav-item', 'active' => request()->routeIs('settings.index')])>
+            <a class="nav-link" href="{{ route('settings.index') }}">
+                <i class="la la-gear"></i>
+                <span> الإعدادات </span>
+            </a>
+        </li>
     </ul>
 </div>
